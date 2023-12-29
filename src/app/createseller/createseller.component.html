@@ -1,0 +1,30 @@
+<p>createseller works!</p>
+<div>
+    <form (ngSubmit)="OnSubmit()">
+        <div>
+            <label>Seller Name</label>
+            <input type="text" class="form-control" id="sellername"
+            [(ngModel)]="seller.S_name" name="sellername">
+        </div><br>
+
+        <div>
+            <label>Seller Title</label>
+            <input type="text" class="form-control" id="sellertitle"
+            [(ngModel)]="seller.S_Title" name="sellertitle">
+        </div><br>
+
+        <div>
+            <label>seller password</label>
+            <input type="text" class="form-control" id="sellerpassword"
+            [(ngModel)]="seller.S_password" name="sellerpassword">
+        </div><br>
+
+        <div>
+            <label>seller address</label>
+            <input type="text" class="form-control" id="selleraddress"
+            [(ngModel)]="seller.S_address" name="selleraddress">
+        </div><br>
+
+        <button class="btn.btn.success" type="submit">submit</button>
+    </form>
+</div>

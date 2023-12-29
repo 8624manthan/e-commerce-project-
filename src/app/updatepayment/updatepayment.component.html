@@ -1,0 +1,27 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+
+    <h3>Create Payment</h3>
+
+    <form (ngSubmit)="onSubmit()" #paymentForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="payment_amount">Payment Amount:</label>
+            <input type="number" class="form-control" id="payment_amount"
+                   [(ngModel)]="payment.paymentAmount" name="payment_amount" required>
+            <!-- <div *ngIf="paymentForm.controls['payment_amount'].invalid && (paymentForm.controls['payment_amount'].dirty || paymentForm.controls['payment_amount'].touched)" class="alert alert-danger">
+                Payment Amount is required.
+            </div> -->
+        </div> <br>
+
+        <div class="form-group">
+            <label for="payment_date">Payment Date:</label>
+            <input type="date" class="form-control" id="payment_date"
+                   [(ngModel)]="payment.paymentDate" name="payment_date" required>
+            <!-- <div *ngIf="paymentForm.controls['payment_date'].invalid && (paymentForm.controls['payment_date'].dirty || paymentForm.controls['payment_date'].touched)" class="alert alert-danger">
+                Payment Date is required.
+            </div> -->
+        </div> <br>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+</div>

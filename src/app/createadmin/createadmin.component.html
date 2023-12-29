@@ -1,0 +1,31 @@
+<p>createadmin works!</p>
+<h3>Create User</h3>
+<div>
+<form (ngSubmit) ="onSubmit()">
+    <div class="form-group">
+        <label>admin Username: </label>
+        <input type="text" class="form-control" id="adminName"
+        [(ngModel)]="admin.adminUserName" name="adminName">
+    </div><br>
+
+
+    <div class="form-group">
+        <label>password: </label>
+        <input type="text" class="form-control" id="adminPassword"
+        [(ngModel)]="admin.adminPassword" name="adminPassword">
+    </div><br>
+
+
+    <div class="form-group">
+        <label>Email: </label>
+        <input type="text" class="form-control" id="adminEmail"
+        [(ngModel)]="admin.adminEmail" name="adminEmail">
+    </div><br>
+
+    
+    <button class="btn.btn.success" type="submit">Submit</button>
+
+    
+
+</form>
+</div>

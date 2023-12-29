@@ -1,0 +1,25 @@
+<p>category-list works!</p>
+
+<h3>category list</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>category id</th>
+            <th>category Name: </th>
+            <th>category description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of category">
+           <td>{{category.categoryId}}</td>
+            <td>{{category.ca_name}}</td>
+            <td>{{category.ca_desc}}</td>
+            
+            <td><button (click) ="updateCategory(category.categoryId)" class="btn btn-info">
+            Update</button></td>
+            <td><button (click) ="deleteCategory(category.categoryId)" class="btn btn-danger">
+            Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

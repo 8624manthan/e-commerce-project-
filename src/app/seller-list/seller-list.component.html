@@ -1,0 +1,29 @@
+<p>seller-list works!</p>
+<h3>seller List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>seller id</th>
+            <th>seller Name</th>
+            <th>seller Title </th>
+            <th>seller password </th>
+            <th>seller address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let seller of seller">
+            <td>{{seller.sellerId}}</td>
+            <td>{{seller.S_name}}</td>
+            <td>{{seller.S_Title}}</td>
+            <td>{{seller.S_password}}</td>
+            <td>{{seller.S_address}}</td>
+            
+
+            <td><button (click) ="updateSeller(seller.sellerId)" class="btn btn-info">
+            Update</button></td>
+            <td><button (click) ="deleteSeller(seller.sellerId)" class="btn btn-danger">
+                Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

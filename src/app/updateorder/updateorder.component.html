@@ -1,0 +1,27 @@
+<p>updateorder works!</p>
+<p>createorder works!</p>
+
+<div>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Order Name</label>
+            <input type="text" class="form-control" id="ordername" 
+            [(ngModel)]="order.order_name" name="order_name">
+        </div><br>
+
+        <div class="form-group">
+            <label>Order date</label>
+            <input type="date" class="form-control" id="orderdate" 
+            [(ngModel)]="order.order_date" name="order_date">
+        </div><br>
+
+        <div class="form-group">
+            <label>order description</label>
+            <input type="text" class="form-control" id="orderdescription"
+            [(ngModel)]="order.order_description" name="order_description">
+        </div><br>
+
+        <button class="btn.btn.success" type="submit">Submit</button>
+    </form>
+</div>

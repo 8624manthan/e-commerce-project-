@@ -1,0 +1,26 @@
+<p>order-list works!</p>
+<h3>orderList</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Order Name: </th>
+            <th>Order date: </th>
+            <th>Order description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of order">
+            <td>{{order.orderId}}</td>
+            <td>{{order.order_name}}</td>
+            <td>{{order.order_date}}</td>
+            <td>{{order.order_description}}</td>
+            
+            <td><button (click) ="updateOrder(order.orderId)" class="btn btn-info">
+            Update</button></td>
+            <td><button (click) ="deleteOrder(order.orderId)" class="btn btn-danger">
+            Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

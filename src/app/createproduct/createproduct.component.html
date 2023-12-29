@@ -1,0 +1,53 @@
+<p>createproduct works!</p>
+<div class="col-md-6 offset-md-3">
+    <br>
+
+
+<h3>Create product</h3>
+
+<form (ngSubmit) ="onSubmit()">
+    <div class="form-group">
+        <label>Product name: </label>
+        <input type="text" class="form-control" id="productName"
+        [(ngModel)]="product.p_name" required name="productName">
+    </div><br>
+
+
+    <div class="form-group">
+        <label>Product price: </label>
+        <input type="number" class="form-control" id="price"
+        [(ngModel)]="product.p_price" required name="price">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label>Product Color: </label>
+        <input type="text" class="form-control" id="color"
+        [(ngModel)]="product.p_color" required name="color">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label>Product size: </label>
+        <input type="int" class="form-control" id="size"
+        [(ngModel)]="product.p_size" required name="size" min="5" max="11" required>
+    </div><br>
+
+    <div class="form-group">
+        <label>Product quantity: </label>
+        <input type="number" class="form-control" id="quantity"
+        [(ngModel)]="product.p_quantity" required name="quantity">
+    </div><br>
+
+
+    <div class="form-group">
+        <label>Product description: </label>
+        <input type="text" class="form-control" id="description"
+        [(ngModel)]="product.p_desc" required name="description">
+    </div><br>
+
+    <button class="btn.btn.success" type="submit">Submit</button>
+
+   
+</form>
+</div>

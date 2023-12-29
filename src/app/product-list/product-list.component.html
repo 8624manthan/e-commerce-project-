@@ -1,0 +1,32 @@
+<p>product-list works!</p>
+<h3>product List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>product id</th>
+            <th>product Name</th>
+            <th>product price </th>
+            <th>product quantity </th>
+            <th>product description</th>
+            <th>product Color</th>
+            <th>product size</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of product">
+            <td>{{product.productid}}</td>
+            <td>{{product.p_name}}</td>
+            <td>{{product.p_price}}</td>
+            <td>{{product.p_quantity}}</td>
+            <td>{{product.p_desc}}</td>
+            <td>{{product.p_color}}</td>
+            <td>{{product.p_size}}</td>
+
+            <td><button (click) ="updateProduct(product.productid)" class="btn btn-info">
+            Update</button></td>
+            <td><button (click) ="deleteProduct(product.productid)" class="btn btn-danger">
+                Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>
