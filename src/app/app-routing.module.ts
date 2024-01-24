@@ -23,6 +23,7 @@ import { UpdatecategoryComponent } from './updatecategory/updatecategory.compone
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
 
 const routes: Routes = [
   {path: 'create-user', component:CreateuserComponent},
@@ -60,6 +61,7 @@ const routes: Routes = [
   {path:'login-user',component:LoginComponent},
 
   {path:'login-admin',component:AdminLoginComponent},
+  {path:'admin-home',component:AdminhomeComponent},
   
 ];
 

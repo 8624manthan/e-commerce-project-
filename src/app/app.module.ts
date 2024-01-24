@@ -28,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CreateSellerComponent } from './create-seller/create-seller.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { CreateSellerComponent } from './create-seller/create-seller.component';
     LoginComponent,
     AdminLoginComponent,
     CreateSellerComponent,
+    AdminhomeComponent,
 
   ],
   imports: [

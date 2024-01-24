@@ -1,21 +1,27 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
   styleUrls: ['./admin-login.component.css']
 })
-export class AdminLoginComponent {
+export class AdminLoginComponent implements OnInit{
   adminEmail: string ="";
   adminPassword: string ="";
-  router: any;
+ 
 
-  constructor(private http: HttpClient )
+
+  constructor(private http: HttpClient ,private router:Router)
   {
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   Login() {
+    
     console.log(this.adminEmail);
     console.log(this.adminPassword);
  
@@ -24,6 +30,7 @@ export class AdminLoginComponent {
       adminPassword: this.adminPassword,
     };
  
+      
         this.http.post("http://localhost:8181/api/admin/login/admin", bodyData).subscribe(  (resultData: any) => {
         console.log(resultData);
     
@@ -38,8 +45,7 @@ export class AdminLoginComponent {
     
          {
           alert("Login Success");
-          this.router.navigateByUrl('/home');
-          
+          this.router.navigateByUrl('/admin-home');          
         }
         else
         {
